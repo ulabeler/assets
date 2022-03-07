@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="none,noindex,nofollow">
+<meta name="description" content="">
+<meta name="keywords" content="ECサイト">
+<title>U labeler</title>
+<link href="css/top.css" rel="stylesheet" type="text/css"></link>
+<!-- <link href="css/reset.css" rel="stylesheet" type="text/css"></link> -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    
+    </head>
+    <header class="header">
+    
+    <div class="header_logo">
+        <h1><a href="template.html"><img src="images/logo.png" alt="ロゴ"></a></h1>
+    </div>
+    
+    <!-- 検索ボックス -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <span class="magnifying_glass"></span>
+        <form method="get" action="#" class="search_container">
+        <input type="text" size="25" placeholder="キーワード検索">
+        <input type="submit" value="&#xf002">
+        </form>
+    
+    </div>
+    
+    
+    <body>
+    
+        <input type="checkbox" id="nav1">
+        <label for="nav1" class="open"><span></span></label>
+        <label for="nav1" class="close"></label>
+    
+    
+        <nav class="menu">
+        <h2 href="template.html">U labelar</h2>
+        <ul>
+            <li><a href="my_list.html">マイ作品リスト</a></li>
+            <li><a href="my_favorite_work_list.html">お気に入り作品リスト</a></li>
+            <li><a href="#">お気に入り作者リスト</a></li>
+            <li><a href="#">購入履歴</a></li>
+            <li><a href="information_confirmation.html">会員情報</a></li>
+            <li><a href="mail_address_modification.html">メールアドレス変更</a></li>
+            <li><a href="member_password_modification.html">パスワード変更</a></li>
+            <li><a href="#">退会</a></li>
+        </ul>
+        </nav>
+        
+        <article>
+            <!-- ページタイトル -->
+    <div class="inquiry_title">
+        <h3>お届け日選択<hr></h3>
+    </div>
+
+    <div class="inquiry_setting">
+        <form method="post" id="hoge4">
+            <table  border="1">
+                <!-- 発送？配送？ -->
+                <tr>
+                    <th>発送方法</th>
+                    <th>お届け予定日</th>
+                    <th>発送料</th>
+                </tr>
+                <tr>
+                    <td class="inquiry_table_td"><input type="radio" name="a" value="<%= year%>:<%= month %>:<%= day+3 %>" id="null" checked>指定なし</td>
+                    <td class="inquiry_table_middle"><%= year%>:<%= month %>:<%= day+3 %></td>
+                    <td class="inquiry_table_td">なし</td>
+                </tr>
+                <tr>
+                    <td class="inquiry_table_td"><input type="radio" name="a" value="day">日時指定</td>
+                    <td class="inquiry_table_middle"><input type="date" value="" name="day">
+                        <select name="time">
+                            <option value="">お届け時間を選択</option>
+                            <option value="8時～12時">8時～12時</option>
+                            <option value="14時～16時">14時～16時</option>
+                            <option value="16時～18時">16時～18時</option>
+                            <option value="18時～20時">18時～20時</option>
+                            <option value="19時～21時">19時～21時</option>
+                        </select></td>
+                    <td class="inquiry_table_td">なし</td>
+                </tr>
+                <tr>
+                    <td class="inquiry_table_td"><input type="radio" name="a" value="<%= month %>/<%= day + 1 %>">即日発送</td>
+                    <td class="inquiry_table_middle"><%= year%>年<%= month %>月<%= day + 1 %>日</td>
+                    <td class="inquiry_table_td">400</td>
+                </tr>
+            </table>
+            <div class="double_button">
+                <button  type="button" class="white_button" onclick="location.href='/purchase/purchase_confirmation'">戻る</button>
+                <button  type="submit" class="black_button" form="hoge4">決定</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- ボタン -->
+    
+
+
+
+
+    </article>
+    <br>
+    <p><a href="#"><span class="iro3">Copyright&copy; U labeler</span></p></a>
+    <br>
+    <a href="#" id="pagetop"><i class="up"></i>↑</a>
+    
+    
+</body>
+</html>

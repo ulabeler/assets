@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="js/index.js">
+    <link rel="stylesheet" href="css/customize_editing.css">
+    
+    <link rel="stylesheet" href="js/jquery.js">
+    <link rel="stylesheet" href="css/pop-up.css">
+    <link rel="shortcut icon" href="#">
+    <title>カスタマイズ</title>
+</head>
+<body>
+    <h5>素体選択 ＞ カラー選択 ＞ カスタマイズ ＞ 作品設定 ＞ 作品設定確認</h5>
+    
+    <div class="wrapper">
+        <div class="div1">
+            <p>テキスト</p>
+            <form method="post" action="">
+                <select name="font_style" id="font_style"><br>
+                    <option id="Arial" value="Arial">Arial</option>
+                    <option id="Noto sons" value="Noto sons">Noto sons</option>
+                    <option id="Century" value="Century">Century</option>
+                    <option id="源ノ角ゴシック" value="源ノ角ゴシック">源ノ角ゴシック</option>
+                    <option id="メイリオ" value="メイリオ">メイリオ</option>
+                    <option id="ヒラギノ" value="ヒラギノ">ヒラギノ</option>
+                    <option id="游明朝" value="游明朝">游明朝</option>
+                    <option id="游ゴシック" value="游ゴシック">游ゴシック</option>
+                    <option id="Roboto" value="Roboto">Roboto</option>
+                    <option id="Lato" value="Lato">Lato</option>
+                    <option id="Montserrat" value="Montserrat">Montserrat</option>
+                </select>
+                <input type="number" id="number" value="16">
+                <input type="color" id="color"><br>
+                <textarea id="message" name="message" cols="25" rows="10"></textarea>
+                <input type="submit" id="formbtn">
+            </form>
+        </div>
+        <div class="div2">
+            <p>スタンプ</p>
+            <div class="img_area">
+                <center>
+                <img src="images/stamp1.png" alt="素体画像">
+                <img src="images/stamp2.png" alt="素体画像">
+                <img src="images/stamp3.png" alt="素体画像">
+                <img src="images/stamp4.png" alt="素体画像">
+                <img src="images/stamp5.png" alt="素体画像">
+                <img src="images/stamp6.png" alt="素体画像">
+                <img src="images/stamp7.png" alt="素体画像">
+                <img src="images/stamp8.png" alt="素体画像">
+                </center>
+            </div>
+            
+            <div class="p1">
+            <!-- ここの書き方分からん -->
+            <a href=""><p>1.2.3... ></p></a>
+            </div>
+            
+        </div>
+        
+        <div class="div3">
+            <button id="">画像選択</button>
+            <button id="gridbtn">グリッド</button>
+            <button id="">3Dビュー</button>
+            <p>iPhone11Pro</p>
+        </div>
+        <div class="div4" id="view">
+            
+            <canvas id="canvas">
+            </canvas>
+        </div>
+        <div class="div5">
+            <div class="center">
+
+            
+                    <button><div id="js-show-popup">素体選択</div></button>
+                
+
+            <form action="work_setting.html" method="post"><button>完成</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup" id="js-popup">
+        <div class="popup-inner">
+            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+
+
+            <!-- 作品詳細（自分）👇 -->
+            
+    
+            <section class="box_item_3">
+                <br>
+                <h3><font color="red">素体選択</font>へ<font color = "red">戻り</font>ますか？</h3>
+                
+                <br>
+                    <p>カスタマイズされた内容は保存されません。</p>
+                <br>
+                
+                
+                <div class="double_button4">
+                    <table class="button_table">
+                        <tr>
+                            <th style = "width: 20%;"></th>
+                            <th><button  type="button" class="white_button2" onclick="location.href=''">はい</button></th>
+                            <th style = "width: 30%;"></th>
+                            <th><button  type="submit" class="red_button2" form=="hoge" onclick="location.href=''">いいえ</button></th>
+                            <th style = "width: 20%;"></th>
+                        </tr>
+                    </table>
+                    <br>
+                    
+                </div>
+            </section>
+
+            <!-- 作品詳細（自分）ここまで👆 -->
+
+            
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+    </div>
+
+    <script src="js/pop-up.js"></script>
+
+
+
+
+
+
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+
+</body>
+</html>

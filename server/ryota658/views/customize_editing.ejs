@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+    <meta name="robots" content="none,noindex,nofollow">
+    <meta name="description" content="ハンドメイドショップサイト">
+    <meta name="keywords" content="ECサイト">
+    <title>U labeler</title>
+    <link href="/css/reset.css" rel="stylesheet" type="text/css"></link>
+    <link href="/css/customize_editing.css" rel="stylesheet" type="text/css"></link>
+    <!-- <link rel="stylesheet" href="/css/konva.css"> -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/js/jquery.js">
+    <link rel="stylesheet" href="/css/pop-up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Slabo+13px&family=Slabo+27px&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+</head>
+<header class="header">
+    <div class="header_logo">
+        <h1><a href="top.html"><img src="images/logo.png" alt="ロゴ"></a></h1>
+    </div>
+    
+    <!-- 検索ボックス -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <div class = "headernakami">
+        <table class = "toptable" cellpadding="5">
+        <tr>
+            <th><span class="magnifying_glass"></span>
+                <form method="get" action="#" class="search_container">
+                    <input type="text" size="25" placeholder="キーワード検索">
+                    <input type="submit" value="&#xf002">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <div class="carticon15">
+                <a href="cart.html"><img src="images/cart-5.png" alt="ロゴ"></a>
+            </div>
+            
+        </tr>
+    
+        </table>
+        <form action="">
+            <div class="cartsuuji">
+                <p>1</p>
+            </div>
+        </form>
+    </div>
+    
+    
+    <body>
+    
+        <input type="checkbox" id="nav1">
+        <label for="nav1" class="open"><span></span></label>
+        <label for="nav1" class="close"></label>
+    
+    
+        <nav class="menu">
+        <h2 href="top.html">U labelar</h2>
+        <ul>
+            <li><a href="#">マイ作品リスト</a></li>
+            <li><a href="#">お気に入り作品リスト</a></li>
+            <li><a href="#">お気に入り作者リスト</a></li>
+            <li><a href="#">購入履歴</a></li>
+            <li><a href="#">会員情報</a></li>
+            <li><a href="mail_address_modification.html">メールアドレス変更</a></li>
+            <li><a href="member_password_modification.html">パスワード変更</a></li>
+            
+        </ul>
+        </nav>
+<article>
+    <br>
+    <br>
+    <h5 class="h5">素体選択 ＞ カラー選択 ＞<font size="5"> カスタマイズ</font> ＞ 作品設定 ＞ 作品設定確認</h5>
+    <!-- ページタイトル -->
+    <h3 class="customize_title">カスタマイズ
+        <hr>
+    </h3>
+    <div class="customize_area">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="customize_text" rowspan="2">
+                        <div class="div1">
+                            <p>テキスト</p>
+                            <form method="get" action="" onsubmit="return form1submit()"></form>
+                                <select name="font_style" id="font_style"><br>
+                                    <option id="Arial" value="Arial">Arial</option>
+                                    <option id="Noto sons" value="Noto sons">Noto sons</option>
+                                    <option id="Century" value="Century">Century</option>
+                                    <option id="源ノ角ゴシック" value="源ノ角ゴシック">源ノ角ゴシック</option>
+                                    <option id="メイリオ" value="メイリオ">メイリオ</option>
+                                    <option id="ヒラギノ" value="ヒラギノ">ヒラギノ</option>
+                                    <option id="游明朝" value="游明朝">游明朝</option>
+                                    <option id="游ゴシック" value="游ゴシック">游ゴシック</option>
+                                    <option id="Roboto" value="Roboto">Roboto</option>
+                                    <option id="Lato" value="Lato">Lato</option>
+                                    <option id="Montserrat" value="Montserrat">Montserrat</option>
+                                    <option id="Oswald" value="Oswald">Oswald</option>
+                                    <option id="source sans pro" value="source sans pro">source sans pro</option>
+                                    <option id="slabo 27px" value="slabo 27px">slabo 27px</option>
+                                    <option id="slabo 13px" value="slabo 13px">slabo 13px</option>
+                                    <option id="Raleway" value="Raleway">Raleway</option>
+                                    <option id="PT sans" value="PT sans">PT sans</option>
+                                    <option id="merriweather" value="merriweather">merriweather</option>
+                                </select><br>
+                                <input type="number" id="number" value="16" style="width: 50px">
+                                <input type="color" id="color"><br>
+                            </form>
+                            <form method="get" onsubmit="return form2submit()">
+                                <textarea id="message" name="message" cols="15" rows="3"></textarea>
+                                <br>
+                                <div class="sousinn_button">
+                                    <input type="submit" id="formbtn" value="決定">
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="customize_button" colspan="3">
+                        <div class="customize_button_area">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <button id="" class="customize_button_syousai">
+                                            <img src="images/syasin2.png" class="gazou_sentaku_image"
+                                                alt="画像選択">
+                                            <p>画像選択</p>
+                                        </button>
+                                        <button id="gridbtn" class="customize_button_syousai">
+                                            <img src="images/grid.png" class="gazou_sentaku_image" alt="グリット">
+                                            <p>グリット</p>
+                                        </button>
+                                        <button id="" class="customize_button_syousai">
+                                            <img src="images/3D_img.png" class="gazou_sentaku_image"
+                                                alt="3Dビュー">
+                                            <p>3Dビュー</p>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <div class="">
+                                            <p id=""><%= object_name %></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="showgrid">
+                    <td class="main_customize_area grid" colspan="2" rowspan="3">
+                        <div id="container"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="customize_stamp" rowspan="3">
+                        <div class="div2">
+                            <p>スタンプ</p>
+                            <div class="stamp_area">
+                                <button id="stp1"><img src="/stamp/stamp1.png" alt="素体画像"></button>
+                                <button id="stp2"><img src="/stamp/stamp2.png" alt="素体画像"></button>
+                                <button id="stp3"><img src="/stamp/stamp3.png" alt="素体画像"></button>
+                                <button id="stp4"><img src="/stamp/stamp4.png" alt="素体画像"></button>
+                                <button id="stp5"><img src="/stamp/stamp5.png" alt="素体画像"></button>
+                                <button id="stp6"><img src="/stamp/stamp6.png" alt="素体画像"></button>
+                                <button id="stp7"><img src="/stamp/stamp7.png" alt="素体画像"></button>
+                                <button id="stp8"><img src="/stamp/stamp8.png" alt="素体画像"></button>
+                            </div>
+                            <div class="p1">
+                                <!-- ここの書き方分からん -->
+                                <a href="">
+                                    <p>1.2.3... ></p>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="customize_end_button" colspan="3">
+                        <div class="">
+                            <div class="customise_double_button">
+                                <button type="button" class="white_button">
+                                    <div id="js-show-popup">素体選択</div>
+                                </button><!-- 購入確認画面へ -->
+                                <button type="button" class="black_button"
+                                    onclick="location.href='work_setting.html'">完成</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="popup" id="js-popup">
+            <div class="popup-inner">
+                <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+                <!-- 作品詳細（自分）👇 -->
+                <section class="box_item_3">
+                    <br>
+                    <h3>
+                        <font color="red">素体選択</font>へ<font color="red">戻り</font>ますか？
+                    </h3>
+                    <br>
+                    <p>カスタマイズされた内容は保存されません。</p>
+                    <br>
+                    <div class="double_button4">
+                        <table class="button_table">
+                            <tr>
+                                <th style="width: 20%;"></th>
+                                <th><button type="button" class="white_button2"
+                                        onclick="location.href='select_object.html'">はい</button></th>
+                                <th style="width: 30%;"></th>
+                                <th><button type="submit" class="red_button2" form=="hoge"
+                                        onclick="location.href='customize_editing.html'">いいえ</button></th>
+                                <th style="width: 20%;"></th>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+                </section>
+                <!-- 作品詳細（自分）ここまで👆 -->
+            </div>
+            <div class="black-background" id="js-black-bg"></div>
+        </div>
+        <script src="/js/pop-up.js"></script>
+    </div>
+</article>
+<footer>
+    <br>
+    <br>
+    <div class="footer_text1">
+        <table class="footer_text">
+
+            <tr>
+                <td>
+                    <p><a href="faq.html">よくある質問　</a></p>
+                </td>
+                <td>
+                    <p><a href="privacy_policy.html">プライバシーポリシー　</a></p>
+                </td>
+                <td>
+                    <p><a href="site_policy.html">サイトポリシー</a></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <p><a href="#"><span class="iro3">Copyright&copy; U labeler</span></p></a>
+
+    <br>
+    <a href="/customize_editing" id="pagetop"><i class="up"></i>↑</a>
+
+</footer>
+<script type="text/javascript" src="/js/konva.min.js"></script>
+<script type="text/javascript" src="/js/konva1.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+<script>
+    bubbly({
+        blur: 5,
+        bubbleFunc: () => `hsla(${Math.random() * 350}, 90%, 50%, ${Math.random() * 0.1})`,
+        canvas: document.querySelector("#back"),
+        colorStart: '#fff',
+        colorStop: '#fff',
+        compose: 'source-over',
+        shadowColor: '#ffffef',
+        velocityFunc: () => Math.random() * 1.4,
+        radiusFunc: () => 3 + Math.random() * 20,
+    });
+</script>
+</body>
+</html>

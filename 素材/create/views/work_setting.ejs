@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="none,noindex,nofollow">
+<meta name="description" content="ハンドメイドショップサイト">
+<meta name="keywords" content="ECサイト">
+<title>U labeler</title>
+<link href="/css/top.css" rel="stylesheet" type="text/css"></link>
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <h1><a href="template.html"><img src="images/logo.png" alt="ロゴ"></a></h1>
+        </div>
+        <!-- 検索ボックス -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <span class="magnifying_glass"></span>
+            <form method="get" action="#" class="search_container">
+                <input type="text" size="25" placeholder="キーワード検索">
+                <input type="submit" value="&#xf002">
+            </form>
+        <input type="checkbox" id="nav1">
+        <label for="nav1" class="open"><span></span></label>
+        <label for="nav1" class="close"></label>
+        <nav class="menu">
+            <h2 href="template.html">U labelar</h2>
+            <ul>
+                <li><a href="my_list.html">マイ作品リスト</a></li>
+                <li><a href="my_favorite_work_list.html">お気に入り作品リスト</a></li>
+                <li><a href="my_favorite_creator_list1">お気に入り作者リスト</a></li>
+                <li><a href="#">購入履歴</a></li>
+                <li><a href="#">会員情報</a></li>
+                <li><a href="mail_address_modification.html">メールアドレス変更</a></li>
+                <li><a href="member_password_modification.html">パスワード変更</a></li>
+                <li><a href="#">退会</a></li>
+            </ul>
+        </nav>
+    <!-- </header> -->
+    <article>
+    <!-- ページ名 -->
+    <div class="pan">
+        <h5>素体選択 ＞ カラー選択 ＞ カスタマイズ ＞ <font size = "5">作品設定 </font>＞ 作品設定確認</h5>
+    </div>
+    <h3 class="h3_center2">作品設定<hr></h3>
+            <section class="box_item_4">
+                <br>
+                <div class="userpage">
+                    <div class="user_3">
+                        <form action="" method="post" id="hoge">
+                            <div class="user_box_1">
+                                <a href=""><table cellpadding="0"　class = "usertable">
+                                    <tr>
+                                        <th rowspan="4" ><p class = user_img2><img src="images/use.png" alt="画像"></p></th>
+                                        <td>　　　　　</td>
+                                    </tr>
+                                    <tr>    
+                                        <td><p class = "username"><%= results[0]["name"]  %></p></td>
+                                        <input type="hidden" name="">
+                                    </tr>
+                                    <tr>    
+                                        <td class = "userid2">@<%= results[0].id %></td>
+                                        <input type="hidden" name="">
+                                    </tr>
+                                </table></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class = "userpage">
+                </div>
+                <p class = "date1"><%= date  %></p>
+                <div class="image_wrapper"><img src="images/color.jpeg"  alt="" /></div>
+                <form method="post">
+                    <p class = "explanation"><%= object_name %></p>
+                    <br>
+                    <table  class = "setumeitable3">
+                        <tr>
+                            <th>作品名　　<font color = "red">*</font>：</th>
+                            <th><input type=”text” name="name" id="work_name" class="tekisuto"  style=" height: 30px; width: 400px;" placeholder="20文字以内"  value="<%= queryarray.name%>"  required ></p></th>
+                        </tr>
+                        <tr>
+                        <th class = "gyoukann"><p class="error_message7" id="error20">
+                            <p>
+                                <% if(typeof errors != 'undefined') { %>
+                                <% } %>
+                            </p>
+                        </th>
+                        </tr>
+                        <tr>
+                            <th>作品説明文<font color = "red">*</font>：</th>
+                            <th><font color = "#85858"><textarea  id="work_description" class="tekisuto" placeholder="20文字以内" name="example2" cols="55" rows="8" wrap="soft" maxlength="150" value="<%= queryarray.example2%>">150文字以内#ハッシュタグ</textarea></font></p></th>
+                        </tr>
+                        <tr>
+                            <th class = "gyoukann"><p class="error_message7" id=""error150></p><!-- やま jsエラーメッセージ --></th>
+                        </tr>
+                        <tr>
+                            <th class = "gyoukann"><p class="error_message7">※ハッシュタグは20文字以内で入力してください。</p><!-- やま jsエラーメッセージ --></th>
+                        </tr>
+                    </table>
+                    <div class="button">
+                        <!-- 閉じるボタン（ポップアップ閉じるボタン）jsページ -->
+                        <!-- <button id="" class="black_button" >決定</button> -->
+                        <input type="submit" value="決定" class="black_button" id="submit">
+                    </div>
+                    <br>
+                </form>
+            </section>
+        </div>
+    </div>
+    <noscript>
+        <p>JavaScriptを有効にしてください。</p>
+    </noscript> 
+    </article>
+    <br>
+    <br>
+    <p><a href="#"><span class="iro3">Copyright&copy; U labeler</span></p></a>
+    <br>
+    <a href="/work_setting" id="pagetop"><i class="up"></i>↑</a>
+</body>
+</html>

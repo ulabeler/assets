@@ -1,0 +1,54 @@
+app.post('/', (req, res) => {
+    let name : string;
+    name = req.body.name;
+    let age : number;
+    age = req.body.age;
+    const sql = "INSERT INTO user(name,age) VALUES (?,?)";
+	connect.query(sql,[name,age],function(err, results){
+        if(err) {
+            throw err;
+        }else {
+            // res.render("form",{name: name , results: results});
+            res.send(results);
+        }
+	});
+});
+app.post('/select', (req, res) => {
+    var id : Number;
+    id = req.body.id;
+	const sql = "select * from user where id = ? ";
+	connect.query(sql,[id], function (err, results) {
+        if (err) {
+            throw err
+        }else {
+            // res.send(results);
+            res.render('select', {results: results , message: "一致しました。"});
+        }
+	});
+});
+app.post('/delete', function (req, res) {
+    let id : Number;
+    id = req.body.id;
+    var sql = "delete from user where id = ?";
+    connect.query(sql, [id] , function (err, results) {
+        if (err) {
+            throw err;
+        }
+        else {
+            res.render('delete',{message : "削除できました。"});
+        }
+    });
+});
+app.post('/update', function (req, res) {
+    let name : string;
+    name = req.body.name;
+    var sql = "UPDATE user SET name = ? WHERE id = 23";
+    connect.query(sql,[name], function (err, results) {
+        if (err) {
+            throw err;
+        }
+        else {
+            res.render('update',{message : "更新できました。"});
+        }
+    });
+});
